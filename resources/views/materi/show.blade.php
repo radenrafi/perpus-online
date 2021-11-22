@@ -29,8 +29,8 @@
             </div>
         </div>
     </div>
-    {{-- <div>
-        <embed src="{{ asset("modul/bambang yoi.pdf") }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="1600px" />
-    </div> --}}
+    <div>
+        <embed src="{{ asset("modul/bambang yoi.pdf") }}" type="application/pdf" width="100%" height="1600px" />
+    </div>
 </div>
 @endsection

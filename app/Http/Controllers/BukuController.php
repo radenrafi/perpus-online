@@ -25,6 +25,7 @@ class BukuController extends Controller
      */
     public function create()
     {
+        $this->authorize('create',Buku::class);
         return view('buku.create');
     }
 
@@ -111,6 +112,7 @@ class BukuController extends Controller
      */
     public function destroy(Buku $buku)
     {
-        //
+        $buku->delete();
+        return redirect()->route('buku.index')->with('pesan', "Buku berhasil dihapus");
     }
 }

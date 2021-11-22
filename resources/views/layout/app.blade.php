@@ -53,6 +53,7 @@
                     {{-- <li class="nav-item">
                         <a class="btn btn-primary navButton" href="{{ route('koleksi') }}">Koleksi</a>
                     </li> --}}
+                    @can('create', App\Models\Buku::class)
                     <li class="nav-item dropdown">
                         <a class="btn btn-primary navButton dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Tambah Koleksi
@@ -62,6 +63,15 @@
                             <li><a class="dropdown-item" href="{{ route('materi.create') }}">Tambah Materi</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary navButton" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                    @endcan
                 </ul>
             </div>
         </div>
