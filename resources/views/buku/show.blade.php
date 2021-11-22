@@ -25,6 +25,13 @@
                     <br>
                     {{ $buku->sinopsis }}
                 </p>
+                @can('create', App\Models\Buku::class)
+                <form action="{{url('/buku/'.$buku->id)}}" method="POST">
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger ml-3">Hapus</button>
+                    @csrf
+                </form>
+                @endcan
             </div>
         </div>
     </div>
