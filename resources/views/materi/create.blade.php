@@ -50,6 +50,26 @@
                                 {{ old('mata_pelajaran') == 'tik' ? 'selected' : ''}}>
                                 TIK
                             </option>
+                            <option value="mat"
+                                {{ old('mata_pelajaran') == 'mat' ? 'selected' : ''}}>
+                                Matematika
+                            </option>
+                            <option value="mat"
+                                {{ old('mata_pelajaran') == 'mat' ? 'selected' : ''}}>
+                                Matematika
+                            </option>
+{{--
+IPS
+Mat
+agama
+ppkn
+b. indo
+b. inggris
+tik
+b. daerah
+seni budaya
+penjaskes
+bk --}}
                         </select>
                         @error('mata_pelajaran')
                             <div class="text-danger">{{ $message }}</div>
